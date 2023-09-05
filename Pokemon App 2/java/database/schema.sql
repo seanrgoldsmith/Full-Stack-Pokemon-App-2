@@ -10,9 +10,9 @@ CREATE TABLE users (
 	CONSTRAINT PK_user PRIMARY KEY (user_id)
 );
 CREATE TABLE pokemon (
-    poke_id SERIAL PRIMARY KEY,
-    poke_api_id INT NOT NULL,
-    poke_name varchar(50) NOT NULL,
+    pokemon_id SERIAL PRIMARY KEY,
+    api_id INT NOT NULL,
+    name varchar(50) NOT NULL,
     url varchar(100)
 );
 

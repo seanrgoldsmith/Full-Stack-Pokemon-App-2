@@ -16,12 +16,25 @@ export default {
     props: {
         id: Number, 
         String,
+        name: String,
     },
     data() {
         return {
             pokemon: {},
             spriteImageFront: "",
             spriteImageBack: "",
+        }
+    },
+    methods: {
+        savePokemon() {
+            let pokemonToSave = {
+                id: this.id,
+                name: this.name,
+            };
+            pokemonService.saveFavorite(pokemonToSave)
+            .then((response) => {
+                console.log(response);
+            });
         }
     },
     created() {

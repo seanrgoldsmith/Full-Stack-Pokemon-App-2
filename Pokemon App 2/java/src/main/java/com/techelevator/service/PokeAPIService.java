@@ -11,4 +11,6 @@ public interface PokeAPIService {
 
     PokemonDetail getPokemonDetailById(int id);
 
+    List<Pokemon> getNextPreviousPokemon(int start, int end);
+
 }
